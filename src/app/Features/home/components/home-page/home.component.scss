@@ -1,0 +1,183 @@
+.home {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+
+    img {
+      display: flex;
+      height: 24px;
+    }
+  }
+
+  .activities-section {
+    margin-top: 30px;
+  }
+
+  .activities-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .activity-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9; /* Fundo do card */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  }
+
+  .activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .activity-header h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .activity-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .activity-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .activity-content label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+  .stars {
+    display: flex;
+  }
+
+  .stars label {
+    font-size: 20px;
+    color: #ddd; /* Cor das estrelas não selecionadas */
+    cursor: pointer;
+  }
+
+  .stars label.selected {
+    color: #f5a623; /* Cor das estrelas selecionadas */
+  }
+
+  .stars input {
+    display: none; /* Esconde o input real */
+  }
+
+  .announcements {
+    margin-bottom: 30px;
+
+    .announcement-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: #2d9e94;
+        font-size: 14px;
+      }
+    }
+
+    .announcement-card {
+      display: flex;
+      margin: 10px 0;
+      padding: 10px;
+      border: none #ccc;
+      border-radius: 10px;
+      box-shadow: inset;
+      gap: 15px;
+      background-color: #c9dedc;
+    }
+  }
+
+  .reminder-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: #2d9e94;
+      font-size: 14px;
+    }
+  }
+
+  .reminder-card {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .reminder-card::before {
+    content: '';
+    width: 64px;
+    height: 100%;
+    background-color: #d19b8c;
+    border-radius: 8px 0 0 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .reminder-card input[type='checkbox'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    background-color: #d19b8c;
+    margin-right: 10px;
+    z-index: 1; /* Coloca o checkbox acima da faixa */
+  }
+
+  /* check preto do botao */
+  .reminder-card input[type='checkbox']:checked {
+    background-color: #000;
+    border: 2px solid #000;
+  }
+
+  .reminder-card input[type='checkbox']:checked::after {
+    content: '✔';
+    font-size: 14px;
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: 18px;
+  }
+
+  .reminder-card label {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    z-index: 1;
+  }
+}
