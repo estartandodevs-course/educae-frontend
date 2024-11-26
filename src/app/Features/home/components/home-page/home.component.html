@@ -3,7 +3,19 @@
     <h2>olá, Lara</h2>
     <a href=""><img src="../../assets/images/sinin.png" alt="" /></a>
   </header>
+  <section class="home-section">
+    <!-- <app-app-navbar></app-app-navbar> -->
+    <div class="content">
+      <app-announcements></app-announcements>
+      <div class="sub-content">
+        <app-activities class="activities"></app-activities>
+        <app-reminder class="reminder"></app-reminder>
+      </div>
+    </div>
+  </section>
+</div>
 
+<!--
   <section class="announcements">
     <div class="announcement-head">
       <h2>Comunicados</h2>
@@ -57,5 +69,4 @@
       <button (click)="filtrarMetas('finalizadas')">Finalizadas</button>
     </div>
     <button (click)="adicionarMeta()">Adicionar Meta</button>
-  </section>
-</div>
+  </section> -->
