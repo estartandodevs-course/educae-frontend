@@ -3,13 +3,5 @@
     <p>Comunicados</p>
     <a routerLink="/annoucement"><p>Ver tudo</p></a>
   </div>
-  <div class="announcement-detais">
-    <div *ngFor="let comunicado of comunicados" class="announcement-card">
-      <img src="../../assets/images/Cool Kids Standing.png" alt="" />
-      <div class="announcement-text">
-        <h2>{{ comunicado.titulo }}</h2>
-        <p>{{ comunicado.descricao }}</p>
-      </div>
-    </div>
-  </div>
+  <app-announcement-card></app-announcement-card>
 </section>

@@ -14,11 +14,6 @@ export class ReminderComponent {
   metasFiltradas = [...this.metas];
   filtroAtual = 'todas';
 
-  verMaisComunicados() {
-    console.log('Abrir tela com todos os comunicados...');
-    // Aqui você pode navegar para outra rota ou exibir um modal
-  }
-
   atualizarMeta(meta: any) {
     const index = this.metas.findIndex((m) => m.titulo === meta.titulo);
     if (index !== -1) {

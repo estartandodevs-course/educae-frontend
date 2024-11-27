@@ -1,11 +1,22 @@
-.content{
-    .home{
-        position: relative;
-    }
-        
-    .nav{
-        
-    }
-        
-        
+@media (min-width: 320px) {
+  .router {
+  }
+
+  .nav-bar {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-page {
+    display: flex;
+  }
+  .nav-bar {
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+  }
 }

@@ -4,12 +4,7 @@
     <a href=""><p>Ver tudo</p></a>
   </div>
 
-  <div *ngFor="let meta of metasFiltradas" class="reminder-card">
-    <label>
-      <input type="checkbox" [(ngModel)]="meta.concluida" (change)="atualizarMeta(meta)" />
-      {{ meta.titulo }}
-    </label>
-  </div>
+  <app-reminder-card></app-reminder-card>
   <div class="filters">
     <!-- <button (click)="filtrarMetas('todas')">Todas</button>
       <button (click)="filtrarMetas('pendentes')">Pendentes</button>

@@ -11,10 +11,8 @@
         <p>Entrega: {{ atividade.dataEntrega | date: 'dd/MM/yyyy' }}</p>
       </div>
       <div class="activity-content">
-        <label class="activity-check">
-          <input type="checkbox" [(ngModel)]="atividade.feita" (change)="marcarFeita(atividade)" />
-          Feita
-        </label>
+        <button class=".activity-check" [(ngModel)]="atividade.feita" (change)="marcarFeita(atividade)">enviar avaliação</button>
+
         <div class="stars">
           <label *ngFor="let estrela of [1, 2, 3, 4, 5]" [class.selected]="atividade.nota >= estrela">
             <input type="radio" name="nota-{{ atividade.titulo }}" [value]="estrela" [(ngModel)]="atividade.nota" />

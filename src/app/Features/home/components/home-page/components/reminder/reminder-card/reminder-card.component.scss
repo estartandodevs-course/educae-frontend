@@ -1,0 +1,108 @@
+.reminder-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: #2d9e94;
+    font-size: 14px;
+  }
+}
+
+.reminder-card {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.reminder-card::before {
+  content: '';
+  width: 64px;
+  height: 100%;
+  background-color: #d19b8c;
+  border-radius: 8px 0 0 8px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.reminder-card input[type='checkbox'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: #d19b8c;
+  margin-right: 10px;
+  z-index: 1; /* Coloca o checkbox acima da faixa */
+}
+
+/* check preto do botao */
+.reminder-card input[type='checkbox']:checked {
+  background-color: #000;
+  border: 2px solid #000;
+}
+
+.reminder-card input[type='checkbox']:checked::after {
+  content: '✔';
+  font-size: 14px;
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 18px;
+}
+
+.reminder-card label {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .reminder-section {
+    margin-top: 30px;
+    background-color: #f9f9f9; /* Fundo do card */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+    .reminder-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: #2d9e94;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .reminder-card {
+      display: flex;
+      align-items: center;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px 0;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+  }
+}

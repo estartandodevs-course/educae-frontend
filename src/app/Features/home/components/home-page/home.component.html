@@ -4,7 +4,6 @@
     <a href=""><img src="../../assets/images/sinin.png" alt="" /></a>
   </header>
   <section class="home-section">
-    <!-- <app-app-navbar></app-app-navbar> -->
     <div class="content">
       <app-announcements></app-announcements>
       <div class="sub-content">
@@ -14,59 +13,3 @@
     </div>
   </section>
 </div>
-
-<!--
-  <section class="announcements">
-    <div class="announcement-head">
-      <h2>Comunicados</h2>
-      <a href=""><h3>Ver tudo</h3></a>
-    </div>
-    <div *ngFor="let comunicado of comunicados" class="announcement-card">
-      <img src="../../assets/images/Cool Kids Standing.png" alt="" />
-      <div class="announcement-text">
-        <h3>{{ comunicado.titulo }}</h3>
-        <p>{{ comunicado.descricao }}</p>
-      </div>
-    </div>
-  </section>
-  <section class="activities-section">
-    <h2>Controle de Atividades</h2>
-    <div *ngFor="let atividade of atividades" class="activity-card">
-      <div class="activity-header">
-        <h3>{{ atividade.titulo }}</h3>
-        <p>Entrega: {{ atividade.dataEntrega | date: 'dd/MM/yyyy' }}</p>
-      </div>
-      <div class="activity-content">
-        <label>
-          <input type="checkbox" [(ngModel)]="atividade.feita" (change)="marcarFeita(atividade)" />
-          Feita
-        </label>
-        <div class="stars">
-          <label *ngFor="let estrela of [1, 2, 3, 4, 5]" [class.selected]="atividade.nota >= estrela">
-            <input type="radio" name="nota-{{ atividade.titulo }}" [value]="estrela" [(ngModel)]="atividade.nota" />
-            ★
-          </label>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="reminder">
-    <div class="reminder-head">
-      <h2>Meus lembretes</h2>
-      <a href=""><h3>Ver tudo</h3></a>
-    </div>
-
-    <div *ngFor="let meta of metasFiltradas" class="reminder-card">
-      <label>
-        <input type="checkbox" [(ngModel)]="meta.concluida" (change)="atualizarMeta(meta)" />
-        {{ meta.titulo }}
-      </label>
-    </div>
-    <div class="filters">
-      <button (click)="filtrarMetas('todas')">Todas</button>
-      <button (click)="filtrarMetas('pendentes')">Pendentes</button>
-      <button (click)="filtrarMetas('finalizadas')">Finalizadas</button>
-    </div>
-    <button (click)="adicionarMeta()">Adicionar Meta</button>
-  </section> -->

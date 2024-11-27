@@ -1,38 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  selector: 'app-reminder-card',
+  templateUrl: './reminder-card.component.html',
+  styleUrl: './reminder-card.component.scss',
 })
-export class HomeComponent {
-  comunicados = [{ titulo: 'Bem-vindo!', descricao: 'Este é o comunicado inicial. bla bla bla bla bla bla bla bla bla' }];
-
-  atividades = [
-    {
-      titulo: 'Trabalho de Matemática',
-      dataEntrega: new Date('2024-11-20'),
-      feita: false,
-      nota: 0,
-    },
-    {
-      titulo: 'Redação sobre meio ambiente',
-      dataEntrega: new Date('2024-11-22'),
-      feita: false,
-      nota: 0,
-    },
-  ];
-
-  // Função para marcar uma meta como concluída
-  marcarMetaConcluida(meta: any) {
-    console.log(`${meta.titulo} marcada como ${meta.concluida ? 'concluída' : 'não concluída'}`);
-  }
-
-  // Função para marcar uma atividade como feita
-  marcarFeita(atividade: any) {
-    console.log(`${atividade.titulo} marcada como ${atividade.feita ? 'feita' : 'não feita'}`);
-  }
-
+export class ReminderCardComponent {
   metas = [
     { titulo: 'Estudar Angular', concluida: false },
     { titulo: 'Praticar TypeScript', concluida: true },
@@ -41,11 +14,6 @@ export class HomeComponent {
   metasFiltradas = [...this.metas];
   filtroAtual = 'todas';
 
-  verMaisComunicados() {
-    console.log('Abrir tela com todos os comunicados...');
-    // Aqui você pode navegar para outra rota ou exibir um modal
-  }
-
   atualizarMeta(meta: any) {
     const index = this.metas.findIndex((m) => m.titulo === meta.titulo);
     if (index !== -1) {
@@ -53,7 +21,6 @@ export class HomeComponent {
     }
     this.filtrarMetas(this.filtroAtual); // Refiltra após a alteração
   }
-
   filtrarMetas(filtro: string) {
     this.filtroAtual = filtro;
     if (filtro === 'todas') {
@@ -71,5 +38,8 @@ export class HomeComponent {
       this.metas.push({ titulo: novaMeta, concluida: false });
       this.filtrarMetas(this.filtroAtual);
     }
+  }
+  marcarFeita(atividade: any) {
+    console.log(`${atividade.titulo} marcada como ${atividade.feita ? 'feita' : 'não feita'}`);
   }
 }
