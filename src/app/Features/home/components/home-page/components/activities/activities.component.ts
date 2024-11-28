@@ -9,13 +9,13 @@ export class ActivitiesComponent {
   atividades = [
     {
       titulo: 'Trabalho de Matemática',
-      dataEntrega: new Date('2024-11-20'),
+      dataEntrega: '2024/11/20',
       feita: false,
       nota: 0,
     },
     {
       titulo: 'Redação sobre meio ambiente',
-      dataEntrega: new Date('2024-11-22'),
+      dataEntrega: '2024/11/22',
       feita: false,
       nota: 0,
     },

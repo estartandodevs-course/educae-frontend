@@ -1,26 +1,24 @@
 <section class="activities-section">
-  <div class="activity-head">
-    <p>Controle de Atividades</p>
-    <a href=""><p>ver tudo</p></a>
-  </div>
   <div *ngFor="let atividade of atividades" class="activity-card">
     <details>
-      <summary>{{ atividade.titulo }}</summary>
+      <summary>
+        <input type="checkbox" />{{ atividade.titulo }} <img src="../../../../../../../assets/images/arrow-down.png" alt="" />
+      </summary>
       <div class="activity-header">
-        <h3>{{ atividade.titulo }}</h3>
-        <p>Entrega: {{ atividade.dataEntrega | date: 'dd/MM/yyyy' }}</p>
+        <h2>{{ atividade.titulo }}</h2>
+        <p>Entrega: {{ atividade.dataEntrega || 'dd/MM/yyyy' }}</p>
       </div>
       <div class="activity-content">
-        <label class="activity-check">
-          <input type="checkbox" [(ngModel)]="atividade.feita" (change)="marcarFeita(atividade)" />
-          Feita
-        </label>
+        <p>Avalie sua execução da atividade:</p>
         <div class="stars">
           <label *ngFor="let estrela of [1, 2, 3, 4, 5]" [class.selected]="atividade.nota >= estrela">
             <input type="radio" name="nota-{{ atividade.titulo }}" [value]="estrela" [(ngModel)]="atividade.nota" />
             ★
           </label>
         </div>
+        <label class="activity-check">
+          <button [(ngModel)]="atividade.feita" (change)="marcarFeita(atividade)">enviar atividade</button>
+        </label>
       </div>
     </details>
   </div>

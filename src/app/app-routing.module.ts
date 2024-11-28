@@ -10,7 +10,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'annoucement',
+    path: 'announcement',
     component: AnnouncementPageComponent,
   },
 ];

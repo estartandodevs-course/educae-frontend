@@ -1,9 +1,4 @@
 <section class="reminder-section">
-  <div class="reminder-head">
-    <p>Meus lembretes</p>
-    <a href=""><p>Ver tudo</p></a>
-  </div>
-
   <div *ngFor="let meta of metasFiltradas" class="reminder-card">
     <label>
       <input type="checkbox" [(ngModel)]="meta.concluida" (change)="atualizarMeta(meta)" />
