@@ -1,0 +1,43 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    height: 56px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 60px;
+
+    h1 {
+      @include title;
+    }
+
+  }
+
+  .tab {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+      @include title-2;
+      text-decoration: none;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      @include flex-center;
+
+      &:hover {
+        border-bottom: 3px solid $primary-darker;
+        border-radius: 4px;
+        @include title-2-bold;
+        color: $primary-darker;
+      }
+    }
+  }
+}
