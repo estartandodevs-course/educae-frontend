@@ -1,38 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  selector: 'app-reminder',
+  templateUrl: './reminder.component.html',
+  styleUrl: './reminder.component.scss',
 })
-export class HomeComponent {
-  comunicados = [{ titulo: 'Bem-vindo!', descricao: 'Este é o comunicado inicial. bla bla bla bla bla bla bla bla bla' }];
-
-  atividades = [
-    {
-      titulo: 'Trabalho de Matemática',
-      dataEntrega: new Date('2024-11-20'),
-      feita: false,
-      nota: 0,
-    },
-    {
-      titulo: 'Redação sobre meio ambiente',
-      dataEntrega: new Date('2024-11-22'),
-      feita: false,
-      nota: 0,
-    },
-  ];
-
-  // Função para marcar uma meta como concluída
-  marcarMetaConcluida(meta: any) {
-    console.log(`${meta.titulo} marcada como ${meta.concluida ? 'concluída' : 'não concluída'}`);
-  }
-
-  // Função para marcar uma atividade como feita
-  marcarFeita(atividade: any) {
-    console.log(`${atividade.titulo} marcada como ${atividade.feita ? 'feita' : 'não feita'}`);
-  }
-
+export class ReminderComponent {
   metas = [
     { titulo: 'Estudar Angular', concluida: false },
     { titulo: 'Praticar TypeScript', concluida: true },
@@ -71,5 +44,8 @@ export class HomeComponent {
       this.metas.push({ titulo: novaMeta, concluida: false });
       this.filtrarMetas(this.filtroAtual);
     }
+  }
+  marcarFeita(atividade: any) {
+    console.log(`${atividade.titulo} marcada como ${atividade.feita ? 'feita' : 'não feita'}`);
   }
 }

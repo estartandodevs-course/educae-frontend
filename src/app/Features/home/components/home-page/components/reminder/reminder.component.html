@@ -1,0 +1,14 @@
+<section class="reminder-section">
+  <div *ngFor="let meta of metasFiltradas" class="reminder-card">
+    <label>
+      <input type="checkbox" [(ngModel)]="meta.concluida" (change)="atualizarMeta(meta)" />
+      {{ meta.titulo }}
+    </label>
+  </div>
+  <div class="filters">
+    <!-- <button (click)="filtrarMetas('todas')">Todas</button>
+      <button (click)="filtrarMetas('pendentes')">Pendentes</button>
+      <button (click)="filtrarMetas('finalizadas')">Finalizadas</button> -->
+  </div>
+  <!-- <button (click)="adicionarMeta()">Adicionar Meta</button> -->
+</section>
