@@ -1,5 +1,5 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
 
 .main {
   display: flex;
@@ -15,7 +15,6 @@
     h1 {
       @include title;
     }
-
   }
 
   .tab {
@@ -39,5 +38,12 @@
         color: $primary-darker;
       }
     }
+  }
+
+  .cartilhas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 8px;
   }
 }

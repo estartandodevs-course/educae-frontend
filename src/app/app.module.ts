@@ -7,10 +7,11 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AprendaComponent } from './aprenda/aprenda.component';
 import { CardListComponent } from './components/card-list/card-list.component';
-import { CartilhaComponent } from './cartilha/cartilha.component';
 import { AplicativosComponent } from './aplicativos/aplicativos.component';
 import { AudiovisualComponent } from './audiovisual/audiovisual.component';
 import { TitleCardListComponent } from './components/card-list/title-card-list/title-card-list.component';
+import { CartilhaTudoComponent } from './cartilha/cartilha-tudo/cartilha-tudo.component';
+import { CartilhaSalvosComponent } from './cartilha/cartilha-salvos/cartilha-salvos.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,11 @@ import { TitleCardListComponent } from './components/card-list/title-card-list/t
     HomeComponent,
     AprendaComponent,
     CardListComponent,
-    CartilhaComponent,
     AplicativosComponent,
     AudiovisualComponent,
     TitleCardListComponent,
+    CartilhaTudoComponent,
+    CartilhaSalvosComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

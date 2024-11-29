@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card-list.component.scss',
 })
 export class CardListComponent {
-  @Input() detailsTitle: string = '';
   @Input() summaryTitle: string = 'teste';
   @Input() summaryParagraph: string = 'teste';
 }

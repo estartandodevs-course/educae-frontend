@@ -7,37 +7,36 @@
   gap: 8px;
   padding: 0px 16px 0px 16px;
 
-.card-title {
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .card-title {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  h2 {
-    @include title-1-bold;
-    color: #464646;
-  }
+    h2 {
+      @include title-1-bold;
+      color: #464646;
+    }
 
-  a {
-    color: $primary-darker;
-    font-family: Nunito;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: normal;
-    text-decoration: none;
-  }
+    a {
+      color: $primary-darker;
+      font-family: Nunito;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: normal;
+      text-decoration: none;
+    }
   }
 
   .details-content {
-   background-color: $neutral-lighter;
-   border-radius: 8px;
-   display: flex;
-   align-items: center;
-   overflow: hidden;
-   transition: height 0.3s ease;
+    background-color: $neutral-lighter;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.3s ease;
 
-
-   details {
+    details {
       @include body;
       width: 100%;
       height: auto;
@@ -48,12 +47,12 @@
       }
 
       summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      font-weight: 700;
-      cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 400;
+        cursor: pointer;
       }
 
       p {
@@ -78,8 +77,6 @@
         }
       }
 
-
-
       div button {
         width: 99px;
         height: 40px;
@@ -92,13 +89,7 @@
       }
     }
   }
-
 }
 
 @media (min-width: 601px) {
-
 }
-
-
-
-
