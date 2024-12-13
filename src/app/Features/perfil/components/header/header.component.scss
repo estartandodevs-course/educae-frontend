@@ -1,0 +1,42 @@
+@import '../../../../../styles/mixins.scss';
+@import '../../../../../styles/variables.scss';
+
+header {
+  height: 56px;
+  border-bottom: 1px solid $neutral-lighter;
+  flex-direction: row;
+  @include flex-center;
+  color: $neutral-darker;
+
+  h2 {
+    width: 100%;
+    @include flex-center;
+    padding-left: 20px;
+  }
+
+  a {
+    @include flex-center;
+    margin-right: 16px;
+    width: 45px;
+    display: none;
+  }
+}
+
+@media(min-width: 600px) {
+  header {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      padding-left: 74px;
+    }
+
+    a {
+      display: block;
+
+    };
+  }
+
+
+}
+

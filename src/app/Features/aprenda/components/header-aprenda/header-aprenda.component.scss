@@ -1,0 +1,33 @@
+@import '../../../../../styles/mixins.scss';
+@import '../../../../../styles/variables.scss';
+
+header {
+  height: 56px;
+  border-bottom: 1px solid $neutral-lighter;
+  flex-direction: row;
+  @include flex-center;
+
+  h2 {
+    width: 100%;
+    @include flex-center;
+  }
+
+  a {
+    @include flex-center;
+    margin-right: 16px;
+    width: 45px;
+  }
+}
+
+@media(min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: flex-start;
+    width: 400px;
+
+    h2 {
+      justify-content: flex-start;
+      margin-left: 125px;
+    }
+  }
+}

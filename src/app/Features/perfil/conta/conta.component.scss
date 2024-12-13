@@ -1,0 +1,93 @@
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/variables.scss';
+
+.main-conta-content {
+  header {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      padding-left: 16px;
+      padding-top: 4px;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.25rem;
+      width: 100%;
+      @include flex-center;
+      padding-right: 45px;
+    }
+  }
+
+  .conta-options {
+    margin-top: 24px;
+    padding: 0px 17px 0px 17px;
+
+      h2 {
+        font-size: 1rem;
+        color: $primary-base;
+        margin-bottom: 8px;
+      }
+
+    .option-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+
+      .option {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 0px 16px 0px;
+
+        .first-paragraph {
+          font-weight: 700;
+          font-size: 1rem;
+        }
+
+        .second-paragraph {
+          font-weight: 400;
+          font-size: 0.875rem;
+          padding-right: 22px;
+        }
+      }
+    }
+  }
+
+  .desativacao-exclusao-content {
+    padding: 0px 17px 0px 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h2 {
+      font-size: 1rem;
+      color: $primary-base
+    }
+
+
+    .content-box{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .content {
+        h2 {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $neutral-darkest;
+        }
+
+        a {
+          text-decoration: none;
+          color: $primary-base;
+        }
+      }
+    }
+  }
+}
