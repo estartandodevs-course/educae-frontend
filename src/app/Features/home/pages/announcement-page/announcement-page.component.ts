@@ -8,19 +8,22 @@ import { Component } from '@angular/core';
 export class AnnouncementPageComponent {
   comunicados = [
     {
-      titulo: 'Bem-vindo!',
-      descricao: 'Este é o comunicado inicial. bla bla bla bla bla bla bla bla bla',
-      date: 'Postado dia:22/10/2001',
+      titulo: 'Feriado dia de finados',
+      descricao:
+        'Informamos que, devido ao feriado de Finados, não haverá aula no dia 2 de novembro de 2024. As atividades serão retomadas normalmente no dia 3 de novembro.  ',
+      date: 'Postado dia: 28/10/2024',
     },
     {
-      titulo: 'Bem-vindo!',
-      descricao: 'Este é o comunicado inicial. bla bla bla bla bla bla bla bla bla',
-      date: 'Postado dia:22/10/2001',
+      titulo: 'Recesso',
+      descricao:
+        'Comunicamos que no dia 11 de novembro entraremos em recesso devido aos processos internos que estão acontecendo na escola. Devido à isso, não haverá aula. ',
+      date: 'Postado dia: 01/07/2024',
     },
     {
-      titulo: 'Bem-vindo!',
-      descricao: 'Este é o comunicado inicial. bla bla bla bla bla bla bla bla bla',
-      date: 'Postado dia:22/10/2001',
+      titulo: 'Feira de adoção',
+      descricao:
+        'Comunicamos que no dia 4 de novembro entraremos organizando uma feira de adoção dentro da nossa escola, a partir das 9h:15. Não perca!Entrada gratuita. ',
+      date: 'Postado dia: 26/10/2024',
     },
   ];
 }
