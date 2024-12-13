@@ -1,0 +1,23 @@
+<div class="card-details-content">
+  <div class="details-content">
+    <details>
+      <summary>
+        {{ summaryTitle }}
+        <span><img src="../../../assets/images/marker.svg" alt="" /></span>
+      </summary>
+      <p>{{ summaryParagraph }}</p>
+      <div class="button-save-share-content">
+        <button>Acessar</button>
+        <div class="icon-content">
+          <a (click)="saveCartilha()" style="cursor: pointer">
+            <img
+              [src]="isSaved ? '../../../assets/images/bookmark-filled.svg' : '../../../assets/images/bookmark.svg'"
+              alt="Salvar"
+              class="bookmark-icon" />
+          </a>
+          <a href=""><img src="../../../assets/images/share.svg" alt="Compartilhar" /></a>
+        </div>
+      </div>
+    </details>
+  </div>
+</div>

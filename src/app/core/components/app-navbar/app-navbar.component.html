@@ -7,7 +7,7 @@
         <p>Home</p>
       </div>
     </a>
-    <a [ngClass]="{ active: currentRoute === '/aprenda' }" (click)="setActive('/aprenda')">
+    <a routerLink="/aprenda" [ngClass]="{ active: currentRoute === '/aprenda' }" (click)="setActive('/aprenda')">
       <div class="home-bar">
         <img src="../../assets/images/book.png" alt="" />
         <p>Aprenda</p>
@@ -22,7 +22,7 @@
         <p>Comunicação</p>
       </div>
     </a>
-    <a href="" [ngClass]="{ active: currentRoute === '/perfil' }" (click)="setActive('/perfil')">
+    <a routerLink="/perfil" href="" [ngClass]="{ active: currentRoute === '/perfil' }" (click)="setActive('/perfil')">
       <div class="home-bar">
         <img src="../../assets/images/perfil.png" alt="" />
         <p>Perfil</p>

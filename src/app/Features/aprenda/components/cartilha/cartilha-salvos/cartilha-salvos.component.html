@@ -1,0 +1,26 @@
+<section class="main cartilha-salvo-page">
+  <div class="header">
+    <img src="../../assets/images/Path.svg" alt="" />
+    <h1>Cartilhas</h1>
+    <img src="../../assets/images/Search.png" alt="" />
+  </div>
+
+  <div class="caminho">
+    <a routerLink="/" class="text">Home ></a>
+    <a routerLink="/aprenda" class="text">Neurodivergência ></a>
+    <p class="title-page">Cartilhas</p>
+  </div>
+
+  <div class="tab">
+    <a routerLink="/cartilhas">Tudo</a>
+    <a routerLink="/cartilhas-salvo">Salvos</a>
+  </div>
+
+  <div class="cartilhas">
+    <app-card-list
+      *ngFor="let cartilha of savedCartilhas"
+      [summaryTitle]="cartilha.title"
+      [summaryParagraph]="cartilha.content ?? ''">
+    </app-card-list>
+  </div>
+</section>

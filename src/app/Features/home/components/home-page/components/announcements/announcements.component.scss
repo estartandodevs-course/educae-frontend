@@ -53,6 +53,16 @@
         gap: 15px;
         background-color: $primary-lightest;
       }
+
+      .announcement-text {
+        h2 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
     }
   }
 }

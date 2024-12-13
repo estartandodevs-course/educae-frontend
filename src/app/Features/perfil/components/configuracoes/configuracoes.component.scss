@@ -1,0 +1,41 @@
+@import '../../../../../styles/mixins.scss';
+@import '../../../../../styles/variables.scss';
+
+.main-configuracoes-content {
+  padding: 0px 16px 0px 16px;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .configuracoes-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .configuracoes-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $neutral-lighter;
+      padding-bottom: 12px;
+
+      .img-title {
+        display: flex;
+
+        p {
+          padding-left: 9px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-configuracoes-content {
+    width: 500px;
+    margin-right: 16px;
+  }
+}
