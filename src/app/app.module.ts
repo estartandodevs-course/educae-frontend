@@ -17,6 +17,12 @@ import { AnnouncementsComponent } from './Features/home/components/home-page/com
 import { ReminderComponent } from './Features/home/components/home-page/components/reminder/reminder.component';
 import { CommonModule } from '@angular/common';
 import { AnnouncementPageComponent } from './Features/home/pages/announcement-page/announcement-page.component';
+import { CommunicationComponent } from './Features/Comunicação/communication.component';
+import { FollowUpComponent } from './Features/Comunicação/components/follow-up/follow-up.component';
+import { NewRequestCardComponent } from './Features/Comunicação/components/new-request-card/new-request-card.component';
+import { NewRequestComponent } from './Features/Comunicação/pages/new-request-page/new-request.component';
+import { ActivitiesPageComponent } from './Features/home/pages/activities-page/activities-page.component';
+import { ReminderPageComponent } from './Features/home/pages/reminder-page/reminder-page.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +40,16 @@ import { AnnouncementPageComponent } from './Features/home/pages/announcement-pa
     AnnouncementsComponent,
     ActivitiesComponent,
     AnnouncementPageComponent,
+    ReminderComponent,
+    AnnouncementsComponent,
+    ActivitiesComponent,
+    AnnouncementPageComponent,
+    ActivitiesPageComponent,
+    ReminderPageComponent,
+    CommunicationComponent,
+    NewRequestComponent,
+    NewRequestCardComponent,
+    FollowUpComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, CommonModule],
   providers: [],

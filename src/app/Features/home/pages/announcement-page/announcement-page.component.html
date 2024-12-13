@@ -1,7 +1,31 @@
 <div class="content">
   <header>
-    <p>Comunicados</p>
     <a href=""><img src="../../../../../assets/images/left-arrow.png" alt="" /></a>
+    <div class="header-text">
+      <h2>Comunicados</h2>
+    </div>
   </header>
-  <app-announcements></app-announcements>
+
+  <div class="cards-section">
+    <div class="content-select">
+      <a href="">Recentes</a>
+      <a href="">Anteriores</a>
+    </div>
+    <div class="desktop-only">
+      <div class="home-path">
+        <p>home ></p>
+        <span>Meus Lembretes</span>
+      </div>
+      <div class="announcements">
+        <div *ngFor="let comunicado of comunicados" class="announcement-card">
+          <img src="../../assets/images/Cool Kids Standing.png" alt="" />
+          <div class="announcement-text">
+            <h2>{{ comunicado.titulo }}</h2>
+            <p>{{ comunicado.descricao }}</p>
+            <p>{{ comunicado.date }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

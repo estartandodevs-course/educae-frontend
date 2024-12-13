@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AnnouncementsComponent {
   comunicados = [
-    { titulo: 'Bem-vindo!', descricao: 'Este é o comunicado inicial. bla bla bla bla bla bla bla bla bla' },
-    { titulo: 'Bem-vindo!', descricao: 'Este é o comunicado inicial. bla bla bla bla bla bla bla bla bla' },
+    {
+      titulo: 'Feriado dia de finados',
+      descricao:
+        'Informamos que, devido ao feriado de Finados, não haverá aula no dia 2 de novembro de 2024. As atividades serão retomadas normalmente no dia 3 de novembro. ',
+      date: '22/10/2001',
+    },
   ];
 }
