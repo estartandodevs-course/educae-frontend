@@ -1,7 +1,6 @@
 @import '../../../../../styles/mixins.scss';
 @import '../../../../../styles/variables.scss';
 
-
 .main-perfil-usuario-content {
   height: 104px;
   display: flex;
@@ -25,12 +24,11 @@
 
     .year-grade {
       color: $neutral-darker;
-
     }
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .main-perfil-usuario-content {
     margin-bottom: 48px;
   }

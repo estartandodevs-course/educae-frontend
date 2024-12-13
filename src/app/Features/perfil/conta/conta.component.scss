@@ -26,18 +26,16 @@
     margin-top: 24px;
     padding: 0px 17px 0px 17px;
 
-      h2 {
-        font-size: 1rem;
-        color: $primary-base;
-        margin-bottom: 8px;
-      }
+    h2 {
+      font-size: 1rem;
+      color: $primary-base;
+      margin-bottom: 8px;
+    }
 
     .option-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-
 
       .option {
         width: 100%;
@@ -67,11 +65,10 @@
 
     h2 {
       font-size: 1rem;
-      color: $primary-base
+      color: $primary-base;
     }
 
-
-    .content-box{
+    .content-box {
       display: flex;
       align-items: center;
       justify-content: space-between;
