@@ -28,6 +28,13 @@ import { HistoricoComponent } from './Features/perfil/components/historico/histo
 import { ConfiguracoesComponent } from './Features/perfil/components/configuracoes/configuracoes.component';
 import { ContaComponent } from './Features/perfil/conta/conta.component';
 import { NotificacoesComponent } from './Features/perfil/notificacoes/notificacoes.component';
+import { CommunicationComponent } from './Features/Comunicação/communication.component';
+import { FollowUpComponent } from './Features/Comunicação/components/follow-up/follow-up.component';
+import { NewRequestCardComponent } from './Features/Comunicação/components/new-request-card/new-request-card.component';
+import { NewRequestComponent } from './Features/Comunicação/pages/new-request-page/new-request.component';
+import { ActivitiesPageComponent } from './Features/home/pages/activities-page/activities-page.component';
+import { ReminderPageComponent } from './Features/home/pages/reminder-page/reminder-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +61,12 @@ import { NotificacoesComponent } from './Features/perfil/notificacoes/notificaco
     ConfiguracoesComponent,
     ContaComponent,
     NotificacoesComponent,
+    ActivitiesPageComponent,
+    ReminderPageComponent,
+    CommunicationComponent,
+    NewRequestComponent,
+    NewRequestCardComponent,
+    FollowUpComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, CommonModule, RouterModule],
   providers: [],

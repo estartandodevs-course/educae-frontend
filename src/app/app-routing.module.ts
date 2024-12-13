@@ -8,6 +8,11 @@ import { CartilhaSalvosComponent } from './Features/aprenda/components/cartilha/
 import { AplicativosComponent } from './Features/aprenda/components/aplicativos/aplicativos.component';
 import { AudiovisualComponent } from './Features/aprenda/components/audiovisual/audiovisual.component';
 import { PerfilAlunoComponent } from './Features/perfil/perfil-aluno/perfil-aluno.component';
+import { CommunicationComponent } from './Features/Comunicação/communication.component';
+import { FollowUpComponent } from './Features/Comunicação/components/follow-up/follow-up.component';
+import { NewRequestCardComponent } from './Features/Comunicação/components/new-request-card/new-request-card.component';
+import { ActivitiesPageComponent } from './Features/home/pages/activities-page/activities-page.component';
+import { ReminderPageComponent } from './Features/home/pages/reminder-page/reminder-page.component';
 
 const routes: Routes = [
   {
@@ -48,6 +53,31 @@ const routes: Routes = [
   {
     path: 'perfil',
     component: PerfilAlunoComponent,
+  },
+  {
+    path: 'activities',
+    component: ActivitiesPageComponent,
+  },
+
+  {
+    path: 'reminder',
+    component: ReminderPageComponent,
+  },
+
+  // Comunicação
+  {
+    path: 'communication',
+    component: CommunicationComponent,
+  },
+
+  {
+    path: 'new-request',
+    component: NewRequestCardComponent, // Nova solicitação
+  },
+
+  {
+    path: 'tracking',
+    component: FollowUpComponent, // Acompanhamento
   },
 ];
 

@@ -1,25 +1,28 @@
 <div class="content">
   <div class="container">
     <h2 class="logo">Educaê</h2>
-    <a routerLink="/">
+    <a routerLink="/" [ngClass]="{ active: currentRoute === '/' }" (click)="setActive('/')">
       <div class="home-bar">
         <img src="../../assets/images/Home.png" alt="" />
         <p>Home</p>
       </div>
     </a>
-    <a routerLink="/aprenda">
+    <a routerLink="/aprenda" [ngClass]="{ active: currentRoute === '/aprenda' }" (click)="setActive('/aprenda')">
       <div class="home-bar">
         <img src="../../assets/images/book.png" alt="" />
         <p>Aprenda</p>
       </div>
     </a>
-    <a routerLink="/">
-      <div class="home-bar">
+    <a
+      routerLink="/communication"
+      [ngClass]="{ active: currentRoute === '/communication' }"
+      (click)="setActive('/communication')">
+      <div class="home-bar" [ngClass]="{ active: currentRoute === '/perfil' }" (click)="setActive('/perfil')">
         <img src="../../assets/images/messages.png" alt="" />
         <p>Comunicação</p>
       </div>
     </a>
-    <a routerLink="/perfil">
+    <a routerLink="/perfil" href="" [ngClass]="{ active: currentRoute === '/perfil' }" (click)="setActive('/perfil')">
       <div class="home-bar">
         <img src="../../assets/images/perfil.png" alt="" />
         <p>Perfil</p>

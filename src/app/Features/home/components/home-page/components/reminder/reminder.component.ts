@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-reminder',
@@ -6,46 +6,20 @@ import { Component } from '@angular/core';
   styleUrl: './reminder.component.scss',
 })
 export class ReminderComponent {
-  metas = [
-    { titulo: 'Estudar Angular', concluida: false },
-    { titulo: 'Praticar TypeScript', concluida: true },
-  ];
-
-  metasFiltradas = [...this.metas];
-  filtroAtual = 'todas';
-
-  verMaisComunicados() {
-    console.log('Abrir tela com todos os comunicados...');
-    // Aqui você pode navegar para outra rota ou exibir um modal
-  }
+  @Input() metas: any[] = []; // Lista de metas recebida da página
+  @Output() atualizar = new EventEmitter<any>(); // Evento para atualizar uma meta
+  @Output() excluir = new EventEmitter<any>(); // Evento para excluir uma meta
+  @Output() adicionar = new EventEmitter<void>(); // Evento para adicionar uma meta
 
   atualizarMeta(meta: any) {
-    const index = this.metas.findIndex((m) => m.titulo === meta.titulo);
-    if (index !== -1) {
-      this.metas[index] = meta;
-    }
-    this.filtrarMetas(this.filtroAtual); // Refiltra após a alteração
+    this.atualizar.emit(meta); // Emite o evento para a página
   }
 
-  filtrarMetas(filtro: string) {
-    this.filtroAtual = filtro;
-    if (filtro === 'todas') {
-      this.metasFiltradas = [...this.metas];
-    } else if (filtro === 'pendentes') {
-      this.metasFiltradas = this.metas.filter((meta) => !meta.concluida);
-    } else if (filtro === 'finalizadas') {
-      this.metasFiltradas = this.metas.filter((meta) => meta.concluida);
-    }
+  excluirMeta(meta: any) {
+    this.excluir.emit(meta); // Emite o evento para a página
   }
 
   adicionarMeta() {
-    const novaMeta = prompt('Digite a nova meta:');
-    if (novaMeta) {
-      this.metas.push({ titulo: novaMeta, concluida: false });
-      this.filtrarMetas(this.filtroAtual);
-    }
-  }
-  marcarFeita(atividade: any) {
-    console.log(`${atividade.titulo} marcada como ${atividade.feita ? 'feita' : 'não feita'}`);
+    this.adicionar.emit(); // Emite o evento para adicionar uma nova meta
   }
 }

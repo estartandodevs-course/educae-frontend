@@ -1,40 +1,52 @@
-@media (min-width: 320px) {
-  .content {
+@import '../../../../styles/main.scss';
+
+.content {
+  display: flex;
+  padding: 0 24px;
+
+  a {
+    text-decoration: none;
+    width: 100%;
+  }
+  .container {
     display: flex;
-    padding: 0 24px;
+    width: 100%;
+    height: 58px;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
 
-    a {
-      text-decoration: none;
-      width: 100%;
+    h2 {
+      display: none;
     }
-    .container {
+  }
+  .home-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4px;
+
+    img {
       display: flex;
-      width: 100%;
-      height: 58px;
-      gap: 25px;
-      align-items: center;
-      justify-content: center;
-
-      h2 {
-        display: none;
-      }
+      width: 24px;
+      height: 24px;
     }
-    .home-bar {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding: 4px;
-
-      img {
-        display: flex;
-        width: 24px;
-        height: 24px;
-      }
-      p {
-        font-size: 10px;
-        color: #868686;
-      }
+    p {
+      font-size: 10px;
+      color: #868686;
     }
+  }
+
+  .active {
+    color: #1b5c57;
+  }
+
+  .active .home-bar p {
+    color: #1b5c57;
+  }
+
+  .active .home-bar img {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(67%) saturate(741%) hue-rotate(142deg) brightness(91%) contrast(90%);
   }
 }
 
@@ -62,6 +74,7 @@
         display: flex;
         font-size: 36px;
         margin-bottom: 24px;
+        color: $primary-base;
       }
 
       a {

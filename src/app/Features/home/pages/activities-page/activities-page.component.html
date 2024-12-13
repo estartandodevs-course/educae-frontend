@@ -1,0 +1,32 @@
+<div class="content">
+  <header>
+    <a href=""><img src="../../../../../assets/images/left-arrow.png" alt="Voltar" /></a>
+    <div class="header-text">
+      <h2>Controle de Atividades</h2>
+    </div>
+  </header>
+
+  <!-- Mobile: Lista única com todas as atividades -->
+  <div class="cards-section mobile-only">
+    <app-activities [atividades]="atividades"></app-activities>
+  </div>
+
+  <!-- Desktop: Separação entre Pendentes e Finalizadas -->
+  <div class="home-path">
+    <p>home ></p>
+    <span>Controle de Atividades</span>
+  </div>
+
+  <div class="desktop-only">
+    <div class="cards-section-desktop-only">
+      <div class="pendentes">
+        <h2>Pendentes</h2>
+        <app-activities [atividades]="atividadesPendentes"></app-activities>
+      </div>
+      <div class="finalizadas">
+        <h2>Finalizadas</h2>
+        <app-activities [atividades]="atividadesFinalizadas"></app-activities>
+      </div>
+    </div>
+  </div>
+</div>
