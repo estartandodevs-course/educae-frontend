@@ -1,54 +1,58 @@
+@import '../../../../../../../styles/main.scss';
+
 .announcements {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    .announcement-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      p{
-        font-size: 30px;
-      }
-      a {
-        text-decoration: none;
-        color: #2d9e94;
-        p{
-          font-size: 14px;
-        }
-      }
+  .announcement-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: 30px;
     }
-
-    .announcement-card {
-      display: flex;
-      margin: 10px 0;
-      padding: 10px;
-      border: none #ccc;
-      border-radius: 10px;
-      box-shadow: inset;
-      gap: 15px;
-      background-color: #c9dedc;
+    a {
+      text-decoration: none;
+      color: $primary-base;
+      p {
+        font-size: 14px;
+      }
     }
   }
 
-  @media(min-width: 1024px){
-    .announcements {
-      
-      
-      
-      .announcement-detais{
+  .announcement-card {
+    display: flex;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset;
+    gap: 15px;
+    background-color: $primary-lightest;
+  }
+}
+
+.announcement-text {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .announcements {
+    .announcement-detais {
+      display: flex;
+      gap: 24px;
+      flex-direction: column;
+
+      .announcement-card {
         display: flex;
-        gap: 24px;
-        
-        .announcement-card {
-          display: flex;
-          width: 100%;
-          margin: 10px 0;
-          padding: 10px;
-          border: none #ccc;
-          border-radius: 10px;
-          box-shadow: inset;
-          gap: 15px;
-          background-color: #c9dedc;
-        }
+        margin: 10px 0;
+        padding: 10px;
+        height: 230px;
+        width: 450px;
+        border-radius: 10px;
+        box-shadow: inset;
+        gap: 15px;
+        background-color: $primary-lightest;
       }
     }
   }
+}

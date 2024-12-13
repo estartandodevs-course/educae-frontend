@@ -1,0 +1,110 @@
+@import '../../../../../styles/main.scss';
+
+.home-path {
+  display: none;
+}
+.content {
+  padding: 0px 8px;
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+
+    .header-text {
+      min-width: 304px;
+      width: 100%;
+      justify-items: center;
+    }
+    a {
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}
+.content-select {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  justify-content: space-evenly;
+
+  a {
+    width: 100%;
+    justify-items: center;
+    text-decoration: none;
+    color: $neutral-darkest;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+}
+.content-select a.active {
+  border-bottom: 2px solid $primary-base; /* Destaque do link ativo */
+  color: $primary-base;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  header {
+    h2 {
+      display: none;
+    }
+    a {
+      display: none;
+    }
+  }
+
+  .mobile-only {
+    display: none;
+  }
+  .home-path {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    padding: 60px 150px;
+
+    p {
+      color: $primary-darker;
+      font-size: 10px;
+    }
+    span {
+      color: $primary-darker;
+      font-size: 14px;
+    }
+  }
+  .desktop-only {
+    display: flex;
+    padding: 100px 150px;
+
+    .cards-section-desktop-only {
+      display: flex;
+      gap: 30px;
+
+      .pendentes {
+        width: 100%;
+        padding: 15px;
+        align-items: center;
+        background-color: $neutral-lightest;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      .finalizadas {
+        width: 100%;
+        padding: 15px;
+        align-items: center;
+        background-color: $neutral-lightest;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<div class="content">
+  <header>
+    <a routerLink="/">
+      <img src="../../../../../assets/images/left-arrow.png" alt="Voltar" />
+    </a>
+    <div class="header-text">
+      <h2>Meus lembretes</h2>
+    </div>
+  </header>
+
+  <div class="cards-section-mobile-only">
+    <app-reminder [metas]="metas" (atualizar)="atualizarMeta($event)" (excluir)="excluirMeta($event)"></app-reminder>
+  </div>
+  <div class="home-path">
+    <p>home ></p>
+    <span>Meus Lembretes</span>
+  </div>
+  <div>
+    <div class="desktop-only">
+      <div class="cards-section-desktop">
+        <div class="pendentes">
+          <h2>Pendentes</h2>
+          <app-reminder [metas]="metasPendentes" (excluir)="excluirMeta($event)"></app-reminder>
+        </div>
+        <div class="finalizadas">
+          <h2>Finalizadas</h2>
+          <app-reminder [metas]="metasFinalizadas" (excluir)="excluirMeta($event)"></app-reminder>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="add-reminder">
+    <button class="add-remind" (click)="toggleLabel()">Adicionar Meta</button>
+  </div>
+
+  <!-- Label para adicionar nova meta -->
+  <div class="new-meta" *ngIf="showLabel">
+    <h2>Adicionar Lembrete</h2>
+    <textarea name="" id="" type="text" [(ngModel)]="newMetaTitle" placeholder="Digite o título da nova meta"></textarea>
+    <div class="buttons">
+      <button (click)="salvarNovaMeta()">Salvar</button>
+      <button (click)="toggleLabel()">Cancelar</button>
+    </div>
+  </div>
+</div>

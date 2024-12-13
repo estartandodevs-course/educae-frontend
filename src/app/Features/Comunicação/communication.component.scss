@@ -1,0 +1,103 @@
+@import '../../../styles/main.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 8px;
+
+  header {
+    height: 56px;
+
+    h2 {
+      color: $neutral-darkest;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    min-width: 328px;
+    margin-top: 12px;
+
+    img {
+      min-width: 328px;
+      max-width: 537px;
+      max-height: 288px;
+      object-fit: cover;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 8px;
+
+    button {
+      color: $neutral-darkest;
+      min-width: 328px;
+      border: none;
+      border-color: $primary-base;
+      border-radius: 20px;
+      border: color$primary-base;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: $primary-base;
+    }
+
+    button:disabled {
+      background-color: $neutral-lightest;
+      cursor: not-allowed;
+    }
+    button:active {
+      background-color: $primary-base;
+      cursor: not-allowed;
+    }
+  }
+}
+.request-card {
+  display: none;
+}
+.request {
+  display: none;
+}
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    padding: 55px;
+
+    .container {
+      display: flex;
+
+      header {
+        width: 537px;
+      }
+      .new-request {
+        display: none;
+      }
+    }
+    .request-card {
+      display: flex;
+      margin-top: 56px;
+    }
+
+    .request {
+      display: flex;
+    }
+  }
+}

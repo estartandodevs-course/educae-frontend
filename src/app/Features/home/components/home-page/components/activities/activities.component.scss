@@ -1,42 +1,114 @@
-.activity-head{
+@import '../../../../../../../styles/main.scss';
+.activity-section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 57px;
+  margin-top: 8px;
+}
 
-  a{
-      text-decoration: none;
-      color: #2d9e94;
-      font-size: 14px;
+.open-card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 57px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.activity-head {
+  display: flex;
+}
+
+summary {
+  display: flex;
+  .check {
+    width: 64px;
+
+    input {
+      appearance: none;
+      width: 24px;
+      height: 23px;
+      margin-left: 10px;
+      border: 2px solid #333;
+      border-radius: 4px;
+      background-color: $primary-base;
+      margin-right: 10px;
+    }
+    input[type='checkbox']:checked {
+      background-color: $neutral-darkest;
+      border: 3px solid $neutral-darkest;
+    }
+    input[type='checkbox']:checked::after {
+      content: '✔';
+      font-size: 15px;
+      color: $neutral-lightest;
+      display: block;
+      text-align: center;
+      line-height: 18px;
+    }
+  }
+
+  .activities-label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 12px;
+      height: 7.4px;
+    }
   }
 }
+
 .activity-card {
   display: flex;
   flex-direction: column;
-  background-color: #C9DEDC; /* Fundo do card */
+  background-color: $primary-lightest; /* Fundo do card */
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 15px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  overflow: hidden;
+  position: relative;
 }
-.activity-check{
-  // display: flex;
-  // justify-content: center;
-  // background-color: #2D9E94;
-  // padding: 10px;
-  // min-width: 151px;
-  // border-radius: 20px;
+.activity-card::before {
+  content: '';
+  width: 64px; /* Largura do traço */
+  background-color: $primary-base; /* Cor do traço verde */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
 
-  button{
+.activity-check {
+  button {
     display: flex;
     justify-content: center;
-    background-color: #2D9E94;
+    background-color: $primary-base;
     padding: 10px;
     min-width: 151px;
     border-radius: 20px;
+    border: $primary-base;
   }
-}  
+}
+
+//check sobre saindo
+.check {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
 
 .activity-content {
   display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: $primary-lightest; /* Cor clara para o fundo */
+  margin-left: 8px; /* Espaço para o traço verde */
 }
 .activity-content label {
   display: flex;
@@ -44,14 +116,13 @@
   font-size: 14px;
   color: #333;
   cursor: pointer;
-  
 }
 .stars {
   display: flex;
 }
 
 .stars label {
-  font-size: 20px;
+  font-size: 23px;
   color: #fff; /* Cor das estrelas não selecionadas */
   cursor: pointer;
 }
@@ -63,44 +134,33 @@
   display: none; /* Esconde o input real */
 }
 
-
-
-
-  
-  
-  
-
-
-
-@media(min-width: 1024px){
+@media (min-width: 1024px) {
   .activities-section {
     border-radius: 8px;
     padding: 15px;
+    max-width: 400px;
   }
-    
-    
-  
+
   .activity-card {
     display: flex;
+
     flex-direction: column;
-    background-color: #C9DEDC; /* Fundo do card */
+    background-color: $primary-lightest; /* Fundo do card */
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    
-    h2{
-      padding: 5px 0px;
-    }
-    p{
-      padding: 5px 0px;
-    }
 
+    h2 {
+      padding: 5px 0px;
+    }
+    p {
+      padding: 5px 0px;
+    }
   }
-  .activity-content{
+  .activity-content {
     display: flex;
     flex-direction: column;
-    
   }
   .activity-content label {
     display: flex;
@@ -108,29 +168,21 @@
     font-size: 20px;
     color: #333;
   }
-    
-  .activity-check{
-    // display: flex;
-    // justify-content: center;
-    // background-color: #2D9E94;
-    // padding: 10px;
-    // min-width: 151px;
-    // border-radius: 20px;
 
-    button{
+  .activity-check {
+    button {
       display: flex;
       justify-content: center;
-      background-color: #2D9E94;
+      background-color: $primary-base;
       padding: 10px;
       min-width: 151px;
       border-radius: 20px;
       border: none;
     }
-  }  
-  
+  }
+
   .stars {
     display: flex;
-    
   }
 
   .stars label {
@@ -143,21 +195,8 @@
   }
 }
 
- 
-
-    
-    
-
-    
-  
-
-  
-    
-      
-
-
-  
-
-
-
-
+@media (min-width: 1024px) {
+  .activities-section {
+    min-width: 350px;
+  }
+}

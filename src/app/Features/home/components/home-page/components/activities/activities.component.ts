@@ -1,26 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ActivityService } from '../../../../../../shared/services/activity.service';
+import { Atividade } from '../../../../../../shared/models/atividade.model';
 
 @Component({
   selector: 'app-activities',
   templateUrl: './activities.component.html',
-  styleUrl: './activities.component.scss',
+  styleUrls: ['./activities.component.scss'],
 })
 export class ActivitiesComponent {
-  atividades = [
-    {
-      titulo: 'Trabalho de Matemática',
-      dataEntrega: '2024/11/20',
-      feita: false,
-      nota: 0,
-    },
-    {
-      titulo: 'Redação sobre meio ambiente',
-      dataEntrega: '2024/11/22',
-      feita: false,
-      nota: 0,
-    },
-  ];
-  marcarFeita(atividade: any) {
-    console.log(`${atividade.titulo} marcada como ${atividade.feita ? 'feita' : 'não feita'}`);
+  @Input() atividades: Atividade[] = [];
+
+  constructor(private activityService: ActivityService) {}
+
+  ngOnInit(): void {}
+
+  enviarAtividade(atividade: Atividade, checkbox: HTMLInputElement): void {
+    this.activityService.atualizarStatus(atividade, checkbox.checked);
+    checkbox.checked = true; // Atualiza o checkbox visualmente.
+    atividade.feita = true; // Atualiza localmente o estado.
   }
 }
