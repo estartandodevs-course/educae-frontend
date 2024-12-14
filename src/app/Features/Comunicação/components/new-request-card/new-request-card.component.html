@@ -1,0 +1,42 @@
+<div class="container">
+  <header>
+    <a routerLink="/communication"><img src="../../../../../assets/images/left-arrow.png" alt="Voltar" /></a>
+    <div class="header-text">
+      <h2>Criar solicitação</h2>
+    </div>
+  </header>
+  <form #form="ngForm" (ngSubmit)="enviarSolicitacao()">
+    <div class="input-about">
+      <label for="assunto">Assunto</label>
+      <input
+        type="text"
+        id="assunto"
+        name="assunto"
+        [(ngModel)]="solicitacao.assunto"
+        required
+        placeholder="Digitar assunto do feedback" />
+    </div>
+
+    <div class="input-content">
+      <label for="conteudo">Conteúdo</label>
+      <textarea
+        name="conteudo"
+        id="conteudo"
+        [(ngModel)]="solicitacao.conteudo"
+        required
+        placeholder="Escrever seu feedback"></textarea>
+    </div>
+
+    <div class="anonim-content">
+      <p>Manter minha identidade em segredo</p>
+      <div class="input-checkbox">
+        <input type="checkbox" [(ngModel)]="solicitacao.anonimo" name="anonimo" id="anonimo" />
+        <div class="slidinggroove"></div>
+        <label class="input-checkbox" for="anonimo"></label>
+      </div>
+    </div>
+    <div class="send">
+      <button type="submit">Enviar solicitação</button>
+    </div>
+  </form>
+</div>

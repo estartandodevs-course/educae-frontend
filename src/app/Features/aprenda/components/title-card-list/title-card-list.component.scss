@@ -1,0 +1,24 @@
+@import '../../../../../styles/mixins.scss';
+@import '../../../../../styles/variables.scss';
+
+.card-title {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+
+  h2 {
+    @include title-1-bold;
+    color: #464646;
+  }
+
+  a {
+    color: $primary-darker;
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+  }
+}

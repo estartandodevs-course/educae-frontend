@@ -1,0 +1,150 @@
+@import '../../../../../styles/main.scss';
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 8px;
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+
+    .header-text {
+      display: flex;
+      justify-content: center;
+      min-width: 304px;
+      width: 100%;
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .input-about {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    label {
+      display: flex;
+      min-width: 328px;
+    }
+    input {
+      display: flex;
+      min-width: 328px;
+      border: solid 1px;
+      border-color: #868686;
+      appearance: none;
+      outline: none;
+      padding: 12px;
+      border-radius: 4px;
+    }
+  }
+
+  .input-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-top: 16px;
+
+    label {
+      display: flex;
+      min-width: 328px;
+    }
+
+    textarea {
+      display: flex;
+      min-width: 328px;
+      height: 231px;
+      border: solid 1px;
+      border-color: #868686;
+      appearance: none;
+      outline: none;
+      padding: 12px;
+      border-radius: 4px;
+    }
+  }
+
+  .input-checkbox {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 24px;
+
+    input {
+      display: none;
+    }
+  }
+
+  .slidinggroove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #868686;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  .slidinggroove::after {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    top: 3px;
+    left: 3px;
+    transition: all 0.3s ease;
+  }
+
+  input:checked + .slidinggroove {
+    background: #5fcf80;
+  }
+
+  input:checked + .slidinggroove:after {
+    transform: translateX(15px);
+  }
+  .anonim-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 27.5px;
+    margin-bottom: 27.5px;
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      display: flex;
+      justify-content: center;
+      background-color: $primary-base;
+      padding: 10px;
+      min-width: 328px;
+      border-radius: 20px;
+      border: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    header {
+      display: none;
+    }
+  }
+}

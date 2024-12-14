@@ -1,0 +1,59 @@
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 425px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.08rem;
+}
+
+button {
+  font-size: 1.08rem;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+  font-family: 'Nunito', sans-serif;
+  line-height: 120%;
+  font-style: normal;
+  transition: font-size 0.3 ease;
+}
+
+h1 {
+  font-size: 3.846rem;
+}
+
+h2 {
+  font-size: 1.923rem;
+}
+
+h3 {
+  font-size: 2.462rem;
+}
+
+h4 {
+  font-size: 3.077rem;
+}
+
+h5 {
+  font-size: 3.846rem;
+}

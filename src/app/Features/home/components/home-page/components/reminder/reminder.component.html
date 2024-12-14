@@ -1,0 +1,9 @@
+<section class="reminder-section">
+  <div *ngFor="let meta of metas" class="reminder-card">
+    <label>
+      <input type="checkbox" [(ngModel)]="meta.concluida" (change)="atualizarMeta(meta)" />
+      {{ meta.titulo }}
+    </label>
+    <button class="delete-btn" (click)="excluirMeta(meta)">🗑️</button>
+  </div>
+</section>

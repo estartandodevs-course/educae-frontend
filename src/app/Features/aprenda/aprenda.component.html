@@ -1,0 +1,61 @@
+<section class="full-content">
+  <section class="main-content">
+    <div class="aprenda">
+      <app-header-aprenda></app-header-aprenda>
+
+      <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
+
+      <section class="title-section">
+        <h2>Neurodivergência</h2>
+      </section>
+
+      <section class="booklet-section">
+        <section class="announcements-and-events-section">
+          <div class="image-content">
+            <img src="../../assets/images/Cool Kids Sitting.png" alt="" />
+          </div>
+
+          <div class="announcements-and-events-content">
+            <h2>O que tem aqui?</h2>
+            <p>
+              Reunimos materiais sobre neurodivergência, acreditamos que a informação é um fator essencial para desenvolver
+              empatia, reduzir preconceitos e tornar o ambiente acolhedor e seguro para todos.
+            </p>
+            <a href="">Link para a lei(...)</a>
+          </div>
+        </section>
+
+        <!-- Cartilhas -->
+        <div class="card-content">
+          <div class="card-title">
+            <h2 class="title-card">Cartilha</h2>
+            <a routerLink="/cartilhas">Ver tudo</a>
+          </div>
+          <ng-container *ngFor="let cartilha of cartilhas">
+            <app-card-list
+              *ngIf="cartilha.title.toLowerCase().includes(searchQuery) || cartilha.content.toLowerCase().includes(searchQuery)"
+              [summaryTitle]="cartilha.title"
+              [summaryParagraph]="cartilha.content">
+            </app-card-list>
+          </ng-container>
+        </div>
+
+        <!-- Aplicativos -->
+        <div class="card-content">
+          <app-title-card-list titleCardList="Aplicativos"></app-title-card-list>
+          <ng-container *ngFor="let app of aplicativos">
+            <app-card-list *ngIf="app.title.toLowerCase().includes(searchQuery)" [summaryTitle]="app.title"> </app-card-list>
+          </ng-container>
+        </div>
+
+        <!-- Audiovisual -->
+        <div class="card-content">
+          <app-title-card-list titleCardList="Audiovisual"></app-title-card-list>
+          <ng-container *ngFor="let audio of audiovisual">
+            <app-card-list *ngIf="audio.title.toLowerCase().includes(searchQuery)" [summaryTitle]="audio.title"> </app-card-list>
+          </ng-container>
+        </div>
+      </section>
+    </div>
+  </section>
+</section>

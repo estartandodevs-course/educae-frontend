@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+
+  .header-text {
+    display: flex;
+    justify-content: center;
+    min-width: 304px;
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+}

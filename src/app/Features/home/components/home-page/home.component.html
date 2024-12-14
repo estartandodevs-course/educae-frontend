@@ -1,0 +1,40 @@
+<div class="home">
+  <header>
+    <h2>olá, Lara</h2>
+    <a href=""><img src="../../assets/images/sinin.png" alt="" /></a>
+  </header>
+  <section class="home-section">
+    <div class="content">
+      <div class="annoucement">
+        <div class="announcement-head">
+          <h2>Comunicados</h2>
+          <a class="mobile-only" routerLink="/announcement"><p>Ver tudo</p></a>
+        </div>
+        <app-announcements></app-announcements>
+        <div class="desktop-only">
+          <a routerLink="/announcement"><p>Ver todos os comunicados</p></a>
+        </div>
+      </div>
+      <div class="sub-content">
+        <div class="activity">
+          <div class="activity-head">
+            <h2>Controle de Atividades</h2>
+            <a routerLink="/activities"><p>ver tudo</p></a>
+          </div>
+          <div class="activity-list" activity>
+            <app-activities class="activities" [atividades]="atividades"></app-activities>
+          </div>
+        </div>
+        <div class="reminder">
+          <div class="reminder-head">
+            <h2>Meus lembretes</h2>
+            <a routerLink="/reminder"><p>ver tudo</p></a>
+          </div>
+          <div class="reminder-list">
+            <app-reminder class="reminder" [metas]="metas"></app-reminder>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+  <header>
+    <a routerLink="/communication"><img src="../../../../../assets/images/left-arrow.png" alt="Voltar" /></a>
+    <div class="header-text">
+      <h2>Acompanhar solicitação</h2>
+    </div>
+  </header>
+  <div class="filters">
+    <div>
+      <a routerLink="/tracking" class="open">abertas</a>
+    </div>
+    <div>
+      <a routerLink="/tracking" class="close">fechadas</a>
+    </div>
+  </div>
+
+  <div *ngIf="solicitacoes.length === 0">Nenhuma solicitação encontrada.</div>
+
+  <section class="solicitacao-section">
+    <div class="content">
+      <div *ngFor="let solicitacao of solicitacoes" class="solicitacao-card">
+        <div class="green-bar"></div>
+        <div class="solicitacao-content">
+          <div class="topic">
+            <h2>{{ solicitacao.assunto }}</h2>
+            <p>{{ solicitacao.data }}</p>
+          </div>
+          <p>{{ solicitacao.conteudo }}</p>
+          <p><strong>Status:</strong> {{ solicitacao.status }}</p>
+          <p *ngIf="solicitacao.resposta"><strong>Resposta:</strong> {{ solicitacao.resposta }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
